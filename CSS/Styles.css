@@ -1,106 +1,209 @@
-/* Reseteo de márgenes y rellenos */
-*{
-    margin: 0;
+/* Restablecer padding y margen */
+* {
     padding: 0;
-    box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box; /* Para un mejor manejo de padding y margen */
 }
 
-/* Estilo general del cuerpo */
+/* Fondo y tipografía del cuerpo */
 body {
-    background-color: #f0f0f0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('../IMG/JPG-FONDO.jpg'); /* Asegúrate de que la ruta sea correcta */
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: center; 
+    font-family: 'Arial', sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+/* Estilos para la imagen de publicidad */
+/* Estilo para la imagen publicitaria */
+#img-publicidad {
+    display: block; /* Para centrar la imagen */
+    margin: 20px auto; /* Centrar la imagen horizontalmente */
+    width: 380px; /* Ancho de la imagen */
+    height: 250px; /* Altura de la imagen */
+    object-fit: cover; /* Para mantener la proporción de la imagen */
 }
 
-/* Área principal de la página con fondo */
-.areaPrincipal {
-    background-image: url(../IMG/JPG-FONDO.jpg); /* Asegúrate de que la ruta sea correcta */
-    background-repeat: no-repeat;
-    background-size: cover; /* Esto hace que el fondo se ajuste siempre a la pantalla */
-    background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
-    opacity: 0.85;
-    width: 100%;
-    height: auto;
+/* Estilo del título principal */
+h1 {
+    font-family: 'Lobster', cursive; /* Fuente Lobster para el título */
+    font-size: 48px;
+    text-align: center; /* Solo el título centrado */
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-
-/* Encabezado de la página con logo */
+/* Estilos para el encabezado */
 #encabezado {
-    background-color: #000000;
+    background: #000000;
     height: 250px;
     text-align: center;
-    background-image: url(../Img/IMG-LOGO.png);
+    background-image: url(../IMG/IMG-LOGO.png);
     background-repeat: no-repeat;
-    background-size: 350px 250px;
-    background-position: center;
+    background-size: 380px 250px; 
+    background-position: center center;
+}
+/* Estilo para las imágenes en la galería */
+section img {
+    display: inline-block; /* Para permitir márgenes en imágenes */
+    margin: 10px; /* Espacio entre las imágenes */
+    width: 200px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 8px; /* Esquinas redondeadas opcionales */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra opcional */
 }
 
-/* Menú de navegación */
-#menu {
-    height: 100px;
-    position: absolute;
-    top: 202px;
+
+/* Estilos para la tabla y las celdas */
+table {
     width: 100%;
+    border: none;
 }
+
+td {
+    vertical-align: top;
+    padding: 10px;
+}
+
+/* Estilos generales para enlaces */
+a {
+    text-decoration: none;
+    color: #FFD700;
+}
+
+/* Estilos para los divs principales */
+div {
+    color: #FFFFFF;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #FFD700;
+    background-color: rgba(58, 163, 233, 0.6); /* Color de fondo semi-transparente */
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px #FFD700;
+    text-align: left; /* Asegura que todo el contenido esté alineado a la izquierda */
+}
+
+/* Estilos para el menú de navegación */
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
-    display: flex;
-    justify-content: center;
+    list-style-type: none; /* Elimina los puntos de la lista */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el padding */
+    overflow: hidden; /* Oculta cualquier contenido desbordante */
 }
 
 li {
-    float: left;
+    float: left; /* Alinea los elementos de la lista horizontalmente */
 }
 
 li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 15px 20px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+    display: block; /* Hace que el enlace ocupe todo el área del bloque */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto dentro del enlace */
+    padding: 15px; /* Espaciado interno */
+    text-decoration: none; /* Elimina el subrayado */
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: #111; /* Cambia el color de fondo al pasar el ratón */
 }
 
-/* Sección de datos principales */
-#datos {
-    width: 80%;
-    background-color: #ffffff;
-    height: auto;
-    margin: 20px auto;
-    padding: 20px;
+
+
+
+/* Estilos para el menú de tacos */
+#menu {
+    padding: 20px; /* Espaciado alrededor del menú */
+    background-color: rgba(126, 158, 179, 0.8); /* Fondo semi-transparente */
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.menu-item {
+    display: flex; /* Usar flexbox para alinear el contenido */
+    align-items: center; /* Alinear verticalmente el texto y la imagen */
+    margin-bottom: 15px; /* Espacio entre los elementos del menú */
+}
+
+.menu-item img {
+    width: 50px; /* Tamaño de las imágenes */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+.precio {
+    color: #FFD700; /* Color dorado para los precios */
+    font-weight: bold; /* Negrita para mayor énfasis */
+}
+
+
+/* Estilos para enlaces del menú de navegación */
+ul li a {
+    display: block;
+    padding: 15px;
+    background-color: #333;
+    color: #bfe1f1;
+    transition: margin-left 0.3s, background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    text-align: left; /* Mantener los textos a la izquierda */
+}
+
+ul li a:hover {
+    margin-left: 10px;
+    color: #b7b7b9;
+    background-color: #0b1741;
+    box-shadow: 10px 10px 20px #000;
+}
+
+/* Estilos para las imágenes */
+img {
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    color: #2a3e55;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    width: 100%; /* Ajustar el ancho de las imágenes */
+    max-width: 300px; /* Limitar el tamaño máximo de las imágenes */
+    height: auto; /* Mantener la proporción de las imágenes */
+}
+
+/* Estilos para los encabezados */
+h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #FFD700;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: left; /* Asegura que los subtítulos no estén centrados */
+}
+
+/* Estilo para párrafos y listas */
+p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: left; /* Asegura que los párrafos no estén centrados */
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: left; /* Asegura que los elementos de lista no estén centrados */
 }
 
 /* Pie de página */
-.piePagina {
-    width: 100%;
-    height: 100px;
-    background-color: #15101b;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1em;
-    position: relative;
-    bottom: 0;
+h3 {
+    text-align: center;
+    font-size: 22px;
+    color: #FFD700;
+    padding-top: 20px;
 }
 
-/* Ajuste de imágenes de tacos */
-.img-tacos {
-    max-width: 100%; /* Se ajusta al contenedor */
-    height: auto; /* Mantiene la proporción */
-    margin: 10px 0;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 8px; /* Bordes redondeados */
+p {
+    text-align: center;
+    font-size: 16px;
+    color: #FFFFFF;
 }
